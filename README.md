@@ -23,7 +23,7 @@ go get github.com/alash3al/sqltmpl
     ```sql
     {{define "get_user_by_email"}}
         SELECT * FROM users
-        WHERE email {{.Bind .Args.emails}}
+        WHERE email IN({{.Bind .Args.emails}})
         OR (email = {{.Bind .Args.email}})
         OR email LIKE {{.Bind (.Concat "%" .Args.email "%")}}
     {{end}}
