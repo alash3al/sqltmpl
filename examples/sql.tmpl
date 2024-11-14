@@ -1,0 +1,5 @@
+{{define "get_user_by_email"}}
+
+    SELECT * FROM users WHERE email IN ({{.Bind .Args.emails}}) OR (email = {{.Bind .Args.email}}) OR email LIKE {{.Bind (.Concat "%" .Args.email "%")}}
+
+{{end}}
