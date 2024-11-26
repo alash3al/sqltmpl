@@ -50,7 +50,7 @@ go get github.com/alash3al/sqltmpl
         )
 
         // Execute template with your parameters
-        sql, err := tpl.Execute("get_user_by_email", map[string]any{
+        SQL, args, err := tpl.Execute("get_user_by_email", map[string]any{
             "emails": []string{"user1@example.com", "user2@example.com"},
             "email":  "user3@example.com",
         })
@@ -58,7 +58,7 @@ go get github.com/alash3al/sqltmpl
             panic(err)
         }
 
-        fmt.Println(sql)
+        fmt.Println(sql, args)
     }
     ```
 
