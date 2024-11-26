@@ -71,6 +71,10 @@ go get github.com/alash3al/sqltmpl
     OR email LIKE $4
     ```
 
+    ```go
+    []interface{"user1@example.com", "user2@example.com", "user3@example.com"}
+    ```
+
 ## 🔧 Advanced Usage
 
 ### Smart `Bind` Function for Flexible Binding
